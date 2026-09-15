@@ -12,5 +12,6 @@ int main (void) {
     uint8_t *arr = malloc(num * sizeof(uint8_t));
     if (!arr) return 1;
     printf("0");
+    free(arr);
     return 0;
 }
