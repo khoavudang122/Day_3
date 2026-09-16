@@ -24,6 +24,7 @@ int main(void) {
     scanf("%"SCNu16,&sd_ptr->rpm);
 
     print(sd_ptr);
-    return 0;
+    free(sd_ptr);
+    return 0; 
     
 }
