@@ -13,6 +13,7 @@ int main(void) {
     uint16_t *reset = adc_buffer;
     // kiểm tra HEAP
     if (adc_buffer == NULL) return 1;
+    uint16_t *check_ptr = adc_buffer; 
     uint16_t *end_ptr = adc_buffer + num;
     
     while (adc_buffer <= end_ptr-1){
@@ -25,7 +26,5 @@ int main(void) {
         reset +=1;
     }
     printf("SUM: %"PRIu16"",sum);
-    free(adc_buffer);
-    free(reset);
-    free(end_ptr);
+    free(check_ptr);
 }
